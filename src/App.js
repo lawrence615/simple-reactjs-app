@@ -5,15 +5,22 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
   const courseGoals = [
     { id: 'cg1', text: 'Finish the course' },
     { id: 'cg2', text: 'Learn all about the course main topic' },
     { id: 'cg3', text: 'Help other students in the course Q&A' }
   ]
+
+  const addNewGoalHandle = (newGoal) => {
+    courseGoals.push(newGoal)
+    console.log(courseGoals)
+  }
+
   return (
     <div className="course-goals">
       <h1>Course Goals</h1>
-      <NewGoal />
+      <NewGoal onAddGoal={addNewGoalHandle} />
       <GoalList goals={courseGoals} />
     </div>
   );
