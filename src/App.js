@@ -4,26 +4,15 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const courseGoals = [
+    { id: 'cg1', text: 'Finish the course' },
+    { id: 'cg2', text: 'Learn all about the course main topic' },
+    { id: 'cg3', text: 'Help other students in the course Q&A' }
+  ]
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
     <div className="course-goals">
       <h1>Course Goals</h1>
-      <GoalList />
+      <GoalList goals={courseGoals} />
     </div>
   );
 }
